@@ -99,3 +99,9 @@ NON-ATOMIC CONTEXT:
             early by a signal. In general, just use msleep unless
             you know you have a need for the interrupt
   
+Compile, Insert and varify output:
+----------------------------------
+ sudo insmod delay-usleep.ko 
+ sudo dmesg 
+ tail -f /var/log/kern.log
+ sudo rmmod delay_usleep 

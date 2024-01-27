@@ -7,7 +7,15 @@
  * kthread_should_stop() - 
  * wake_up_process() - 
  * kthread_stop() - 
+ *
+ * 	Compile, Insert and varify output:
+	----------------------------------
+ 	sudo insmod delay-usleep.ko
+ 	sudo dmesg
+ 	tail -f /var/log/kern.log
+ 	sudo rmmod delay_usleep
  */
+
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/kthread.h>	/*Create thread */
